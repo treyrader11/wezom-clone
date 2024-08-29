@@ -40,11 +40,7 @@ export default function NewsroomPage() {
 
   return (
     <main>
-      <Hero
-        backgroundColor="purple"
-        headlineText="Explore news and features"
-        backgroundImageUrl="6543dd67343fe98e99e261b3_noise.png"
-      >
+      <Hero>
         <CategoryFilters
           activeCategory={activeCategory}
           setActiveCategory={(category) => {
