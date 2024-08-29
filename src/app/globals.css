@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors */
+
+    /* use hsl if you want color channels to work with tw's opacity modifier syntax: */
+    --black: 240, 2%, 10%;
+    --link: 210, 100%, 50%;
+    --lime-green: 118, 42%, 51%;
+    --grey: 210, 13%, 94%;
+    --alice-blue: 213, 84%, 93%;
+    --purp: 253, 68%, 58%;
+    --black-70: 240, 2%, 10%;
+    --yellow: 60, 100%, 68%;
+    --cold-blue: 210, 13%, 94%;
+    --gray: 240, 1%, 20%;
+    --ug: 47, 100%, 50%;
+    --musescore4: 210, 95%, 93%;
+    --link-hover: 210, 100%, 50%;
+    --stroke2: 204, 9%, 89%;
+    --orange-2: 15, 95%, 61%;
+    --black-40: 240, 2%, 10%;
+    --black-98: 240, 2%, 10%;
+    --orange: 16, 78%, 60%;
+    --accessible-components-dark-grey: 0, 0%, 61%;
+    --musescore: 222, 28%, 14%;
+    --lilac: 253, 68%, 58%;
+
+    /* Sizes */
+
+    --header-height: 71px;
+  }
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    font-size: 4rem;
+    line-height: 60px;
+  }
+  h2 {
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.04em;
+  }
+  h3 {
+    letter-spacing: -0.07em;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* Explain global styles in tutorial */
+  footer,
+  section {
+    padding: 7.5rem 1.2rem 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  main {
+    overflow: clip;
+  }
+
+  /* Styles for screens between 640px and 768px. same as sm: breakpoint */
+
+  @media (min-width: 500px) {
+    /* h1 {
+      font-size: 8rem;
+      line-height: 114px;
+    } */
+    h2 {
+      font-size: 8rem;
+      line-height: 7rem;
+    }
+    /* h3 {
+      font-size: 4.5rem;
+      line-height: 4rem;
+      font-weight: 700;
+    } */
+  }
+
+  @media (min-width: 640px) and (max-width: 768px) {
+    h1 {
+      font-size: 8rem;
+      line-height: 114px;
+    }
+    h2 {
+      font-size: 9rem;
+      line-height: 8rem;
+    }
+    h3 {
+      font-size: 4.5rem;
+      line-height: 4rem;
+      font-weight: 700;
+    }
+  }
+
+  /* Styles for screens between 768px and 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+      font-size: 10rem;
+      line-height: 8.7rem;
+    }
+    h2 {
+      font-size: 9rem;
+      line-height: 8rem;
+    }
+    h3 {
+      font-size: 5rem;
+      line-height: 4rem;
+    }
+  }
+
+  /* Styles for screens 768px and above */
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 13rem;
+      line-height: 11.5rem;
+    }
+    h2 {
+      font-size: 11rem;
+      line-height: 10rem;
+    }
+    h3 {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+    }
+  }
+}
+
+@layer components {
+  .toggle-burger {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:rotate-[720deg];
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .size-screen {
+    @apply h-screen w-screen;
+  }
+  .title-mask {
+    @apply overflow-hidden
+    bg-clip-text
+    flex-center;
+  }
+}
+
+@layer utilities {
+  .text-gradient-green,
+  .text-gradient-orange,
+  .text-gradient-red,
+  .text-gradient-purp,
+  .text-gradient-yellow,
+  .text-gradient-yellow-2,
+  .text-gradient-lavender,
+  .text-gradient-lavender-2 {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .text-gradient-yellow {
+    background-image: linear-gradient(#ffff5b, #daecfe);
+  }
+  .text-gradient-red {
+    background-image: linear-gradient(174deg, #ff2001 5%, white 41%);
+  }
+  .text-gradient-yellow-2 {
+    background-image: linear-gradient(#ffa800, #ffff5b);
+  }
+  .text-gradient-purp {
+    background-image: linear-gradient(333deg, #5127da 54%, #9bcefd 89%);
+  }
+  .text-gradient-green {
+    background-image: linear-gradient(
+      193deg,
+      hsl(var(--black)) 69%,
+      hsl(var(--lime-green)) 86%
+    );
+  }
+  .text-gradient-orange {
+    background-image: linear-gradient(
+      346deg,
+      hsl(var(--black)) 68%,
+      #fa6d3e 87%
+    );
+  }
+  .text-gradient-lavender {
+    background-image: linear-gradient(
+      346deg,
+      hsl(var(--alice-blue)) 68%,
+      #fa6d3e 87%
+    );
+  }
+  .text-gradient-lavender-2 {
+    background-image: linear-gradient(
+      87deg,
+      #694adc 22%,
+      black 36%,
+      black 50%,
+      black 63%,
+      hsl(var(--lilac)) 80%
+    );
+  }
+}
