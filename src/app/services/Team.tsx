@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import Featured from "../components/Featured";
 import Logo from "../components/Logo";
 import Image from "next/image";
 import { TEAM_AVATARS } from "@/lib/constants";
