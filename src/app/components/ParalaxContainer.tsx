@@ -131,7 +131,7 @@ export function GrowIntoView({
   const { scrollYProgress } = useScroll({
     target: targetRef,
     // offset: ["start end", "end"],
-    offset: [0, 1, "1.33 1"],
+    offset: ["0 1", "1.33 1"],
   });
 
   // useScroll({
@@ -145,11 +145,6 @@ export function GrowIntoView({
   return (
     <motion.div
       style={{
-        // backgroundSize: "cover",
-        // backgroundPosition: "center",
-        // height: `calc(100vh - ${IMG_PADDING * 2}px)`,
-        // top: IMG_PADDING,
-        // scale,
         scale: scrollYProgress,
         opacity: scrollYProgress,
       }}

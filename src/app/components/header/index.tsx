@@ -43,7 +43,7 @@ export default function Header() {
         <Logo className={cn({ "fill-black": scrollY })} />
         <div className={cn("flex", "items-center", "ml-auto")}>
           <Nav className="hidden md:flex" />
-          <Button className={cn({ "bg-orange-600 text-black": scrollY })}>
+          <Button size="sm" className={cn({ "bg-orange-600 text-black": scrollY })}>
             Contact us
           </Button>
           <Burger

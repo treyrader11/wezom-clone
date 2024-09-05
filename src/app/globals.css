@@ -34,7 +34,7 @@
     --header-height: 71px;
   }
 
-  h1 {
+  /* h1 {
     font-weight: 900;
     letter-spacing: -0.05em;
     font-size: 4rem;
@@ -58,17 +58,12 @@
   h3 {
     text-align: center;
     text-transform: uppercase;
-  }
+  } */
 
   /* Explain global styles in tutorial */
-  footer,
+
   section {
-    padding: 7.5rem 1.2rem 0;
-    width: 100%;
-    height: 100%;
-    max-width: 1366px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 5.5vw 0;
   }
 
   a {
@@ -86,10 +81,10 @@
       font-size: 8rem;
       line-height: 114px;
     } */
-    h2 {
+    /* h2 {
       font-size: 8rem;
       line-height: 7rem;
-    }
+    } */
     /* h3 {
       font-size: 4.5rem;
       line-height: 4rem;
@@ -97,7 +92,7 @@
     } */
   }
 
-  @media (min-width: 640px) and (max-width: 768px) {
+  /* @media (min-width: 640px) and (max-width: 768px) {
     h1 {
       font-size: 8rem;
       line-height: 114px;
@@ -111,7 +106,7 @@
       line-height: 4rem;
       font-weight: 700;
     }
-  }
+  } */
 
   /* Styles for screens between 768px and 1024px */
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -130,7 +125,7 @@
   }
 
   /* Styles for screens 768px and above */
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
     h1 {
       font-size: 13rem;
       line-height: 11.5rem;
@@ -143,7 +138,7 @@
       font-size: 4.5rem;
       line-height: 4.5rem;
     }
-  }
+  } */
 }
 
 @layer components {
@@ -220,3 +215,10 @@
     );
   }
 }
+
+
+
+
+
+
+

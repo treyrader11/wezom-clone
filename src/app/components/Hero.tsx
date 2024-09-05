@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Video from "./Video";
 import ParallaxContainer, { StickyContainer } from "./ParalaxContainer";
+import Button from "./Button";
 
 type HeroProps = {
   children?: React.ReactNode;
@@ -23,7 +24,7 @@ export default function Hero({ children, className }: HeroProps) {
       )}
     >
       {/* <BackgroundVideo /> */}
-      <StickyContainer className="border z-4 border-red-500 ">
+      <StickyContainer className="border z-4">
         <div
           className={cn(
             "min-h-[calc(100vh-100px-88px-80px)]",
@@ -48,6 +49,9 @@ export default function Hero({ children, className }: HeroProps) {
           <p>into Powerful &</p>
           <p>Lucrative Realities</p>
         </div>
+        <Button showIcon variant="magnetic" size="lg">
+          Get Started
+        </Button>
       </StickyContainer>
     </section>
   );
@@ -88,5 +92,3 @@ export function Title({
     </div>
   );
 }
-
-// padding: 88px 0 80px;

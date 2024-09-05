@@ -68,11 +68,31 @@ const config: Config = {
         grotesk: "var(--font-grotesk)",
       },
       keyframes: {
+        arrow: {
+          "0%": {
+            transform: "translate(0, 0)",
+            opacity: "1",
+          },
+          "49%": {
+            transform: "translate(32px, -32px)",
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
+            transform: "translate(-32px, 32px)",
+          },
+          "51%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate(0px, 0px)",
+          },
+        },
         "open-menu": {
           "50%": {
             top: "50%",
             bottom: "50%",
-            transform: " scale(0.3)",
+            transform: "scale(0.3)",
           },
           "100%": {
             top: "50%",
@@ -96,6 +116,7 @@ const config: Config = {
         },
       },
       animation: {
+        "arrow": "arrow0.5s ease-in-out forwards",
         "open-menu": "open-menu 0.5s ease-in-out forwards",
         "close-menu": "close-menu 0.5s ease-in-out forwards",
         "fade-in": "fade-in 300ms ease-in-out",
